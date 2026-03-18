@@ -6,26 +6,26 @@
 <body>
     <h1>Agent Testing Page</h1>
 
-    <script type='text/javascript'>
-        function initEmbeddedMessaging() {
-            try {
-                embeddedservice_bootstrap.settings.language = 'en_US';
+   <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-                embeddedservice_bootstrap.init(
-                    'YOUR_ORG_ID',
-                    'YOUR_DEPLOYMENT_NAME',
-                    'YOUR_SITE_URL',
-                    {
-                        scrt2URL: 'YOUR_SCRT_URL'
-                    }
-                );
-            } catch (err) {
-                console.error(err);
-            }
-        }
-    </script>
+			embeddedservice_bootstrap.init(
+				'00DKS000000Gyi2',
+				'Podcast_Agent_Setting',
+				'https://boltsolutions--full2.sandbox.my.site.com/ESWPodcastAgentSetting1773819806970',
+				{
+					scrt2URL: 'https://boltsolutions--full2.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://boltsolutions--full2.sandbox.my.site.com/ESWPodcastAgentSetting1773819806970/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
-    <script src="YOUR_BOOTSTRAP_URL" onload="initEmbeddedMessaging()"></script>
 
 </body>
 </html>
