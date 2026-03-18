@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agent Test Page</title>
+</head>
+<body>
+    <h1>Agent Testing Page</h1>
+
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US';
+
+                embeddedservice_bootstrap.init(
+                    'YOUR_ORG_ID',
+                    'YOUR_DEPLOYMENT_NAME',
+                    'YOUR_SITE_URL',
+                    {
+                        scrt2URL: 'YOUR_SCRT_URL'
+                    }
+                );
+            } catch (err) {
+                console.error(err);
+            }
+        }
+    </script>
+
+    <script src="YOUR_BOOTSTRAP_URL" onload="initEmbeddedMessaging()"></script>
+
+</body>
+</html>
